@@ -1,5 +1,5 @@
 {
-  "name": "scrum_board_project",
+  "name": "batboard",
   "version": "1.0.0",
   "description": "This is our Trello project using Node,Express,Angular and MongoDb",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/i069734/scrum_board_project.git"
+    "url": "git+https://github.com/i069734/batboard.git"
   },
   "author": "Antoine, Đat, Truong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/i069734/scrum_board_project/issues"
+    "url": "https://github.com/i069734/batboard/issues"
   },
-  "homepage": "https://github.com/i069734/scrum_board_project#readme"
+  "homepage": "https://github.com/i069734/batboard#readme"
 }
