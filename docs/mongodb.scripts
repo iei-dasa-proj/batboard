@@ -1,0 +1,43 @@
+# start Mongo Database
+    * mongod --dbpath=/data/db (e.g. default port is 27017)
+# connect to Mongo Database
+    * mongo --port 27017
+# create Database
+
+# use Database 
+    * use batboard
+
+# insert collections
+    * db.users.insertMany(
+        [{
+            "id": 1,
+            "first_name": "Truong",
+            "last_name": "LE",
+            "username": "truongle",
+            "email": "lqtruong@gmail.com",
+            "password": "abc",
+            "image_url": "http://batboard.com/truong.jpg",
+            "role": [1,2]
+        },
+        {
+            "id": 2,
+            "first_name": "John",
+            "last_name": "Gee",
+            "username": "john.gee",
+            "email": "john.gee@gmail.com",
+            "password": "abc",
+            "image_url": "http://batboard.com/john.jpg",
+            "role": [2]
+        },
+        {
+            "id": 3,
+            "first_name": "Simon",
+            "last_name": "Kan",
+            "username": "simon.kan",
+            "email": "simon.kan@gmail.com",
+            "password": "abc",
+            "image_url": "http://batboard.com/simon.jpg",
+            "role": [2]
+        },
+        ]
+    );
