@@ -9,8 +9,10 @@ import { BbLocalStorageService } from './storage/bb-localstorage-services';
 import { BbSessionStorageService } from './storage/bb-sessionstorage-services';
 import { SessionStorageService, LocalStorageService } from 'ngx-webstorage';
 import { Ng2Webstorage } from 'ngx-webstorage';
+import { HeaderComponent } from '../header/header.component';
 
 export const COMPONENTS = [
+  HeaderComponent,
   NotFoundComponent
 ];
 
