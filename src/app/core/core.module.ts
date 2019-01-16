@@ -3,15 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { NotFoundComponent } from './error/not-found.component';
-import { AppComponent } from '../app.component';
 import { MaterialModule } from '../material';
 import { BbLocalStorageService } from './storage/bb-localstorage-services';
 import { BbSessionStorageService } from './storage/bb-sessionstorage-services';
-import { SessionStorageService, LocalStorageService } from 'ngx-webstorage';
 import { Ng2Webstorage } from 'ngx-webstorage';
 
 export const COMPONENTS = [
-  AppComponent,
   NotFoundComponent
 ];
 
