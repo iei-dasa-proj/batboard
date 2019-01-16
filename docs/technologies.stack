@@ -1,0 +1,5 @@
+NodeJS: 
+Express: ^4.16.4
+MongoDB: 3.4
+Angular Core: ~7.2.0   
+Angular CLI: ~7.2.0   
