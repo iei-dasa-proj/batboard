@@ -31,7 +31,7 @@ export class AuthService {
     if (authenf === false) {
       return throwError('Invalid username or password');
     }
-    return of({ name: 'User' });
+    return of({ name: username });
   }
 
   logout() {
