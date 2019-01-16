@@ -11,7 +11,6 @@ import { SessionStorageService, LocalStorageService } from 'ngx-webstorage';
 import { Ng2Webstorage } from 'ngx-webstorage';
 
 export const COMPONENTS = [
-  AppComponent,
   NotFoundComponent
 ];
 
