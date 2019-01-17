@@ -7,8 +7,10 @@ import { MaterialModule } from '../material';
 import { BbLocalStorageService } from './storage/bb-localstorage-services';
 import { BbSessionStorageService } from './storage/bb-sessionstorage-services';
 import { Ng2Webstorage } from 'ngx-webstorage';
+import { AppComponent } from '../app.component';
 
 export const COMPONENTS = [
+  AppComponent,
   NotFoundComponent
 ];
 
