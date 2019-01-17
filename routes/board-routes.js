@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var User = require('../models/User.js');
 var Board = require('../models/Board.js');
-var Item = require('../models/Item.js');
+var Backlog = require('../models/Backlog.js');
 
 //========================================================
 //===============STARTING APIs FOR BATBOARD===============
@@ -59,7 +59,7 @@ router.get('/users/', function (req, res, next) {
 //========================================================
 /* Get Item by ID */
 router.get('/items/:id', function (req, res, next) {
-  Item.findById(req.params.id, function (err, post) {
+  Backlog.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
