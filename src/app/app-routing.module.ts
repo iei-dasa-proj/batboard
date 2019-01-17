@@ -5,10 +5,10 @@ import { AuthGuard } from './auth/services/auth-guard.service';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/board', pathMatch: 'full' },
+  { path: '', redirectTo: '/boards', pathMatch: 'full' },
   {
-    path: 'board',
-    loadChildren: './board/board.module#BoardModule',
+    path: 'boards',
+    loadChildren: './boards/boards.module#BoardsModule',
     canActivate: [AuthGuard],
   },
   { path: '**', component: NotFoundComponent },

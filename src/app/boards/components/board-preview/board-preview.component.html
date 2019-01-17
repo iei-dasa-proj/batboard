@@ -1,0 +1,14 @@
+<a [routerLink]="['/boards', id]">
+  <mat-card>
+    <mat-card-title-group>
+      <mat-card-title>Board ID: {{ id }}</mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content>
+      <p *ngIf="name">Board Name: {{ name }}</p>
+    </mat-card-content>
+    <mat-card-footer>
+      From: {{fromDate}}
+      To: {{dueDate}}
+    </mat-card-footer>
+  </mat-card>
+</a>
