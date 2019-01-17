@@ -1,8 +1,6 @@
 import { LocalStorageService } from 'ngx-webstorage';
 import { BbStorageConstants } from './bb-storage-constants';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',

@@ -41,3 +41,20 @@
         },
         ]
     );
+
+    * db.boards.insertMany(
+        [{
+            "name": "Board 1",
+
+        },
+        {
+            "name": "Board 2"
+        },
+        {
+            "name": "Board 3"
+        },
+        ]
+    );
+
+// CREATE Boards by Curl POST
+curl -i -X POST -H "Content-Type: application/json" -d '{ "name":"test" }' localhost:3000/api/boards    
