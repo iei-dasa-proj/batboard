@@ -5,6 +5,7 @@ import { BoardsRoutingModule } from './boards-routing.module';
 import { BoardListComponent } from './components/board-list/board-list.component';
 import { BoardListPageComponent } from './containers/board-list-page/board-list-page.component';
 import { BoardsService } from '../core/boards/boards.services';
+import { BoardPreviewComponent } from './components/board-preview/board-preview.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { BoardsService } from '../core/boards/boards.services';
   ],
   declarations: [
     BoardListComponent,
-    BoardListPageComponent
+    BoardListPageComponent,
+    BoardPreviewComponent
   ],
   providers: [
     BoardsService

@@ -4,6 +4,7 @@ import { Board } from '../../models/board';
 import { Router } from '@angular/router';
 import { BbLocalStorageService } from '../../../core/storage/bb-localstorage-services';
 import { BbSessionStorageService } from '../../../core/storage/bb-sessionstorage-services';
+import { BoardsService } from '../../../core/boards/boards.services';
 
 @Component({
   selector: 'bb-board-list-page',
@@ -13,11 +14,13 @@ import { BbSessionStorageService } from '../../../core/storage/bb-sessionstorage
 export class BoardListPageComponent implements OnInit {
 
   boards$: Observable<Board[]>;
+  result: string;
 
   constructor(
     private router: Router,
     private localStorageService: BbLocalStorageService,
-    private sessionStorageService: BbSessionStorageService
+    private sessionStorageService: BbSessionStorageService,
+    private boardsService: BoardsService
   ) { }
 
   ngOnInit() {
@@ -31,5 +34,39 @@ export class BoardListPageComponent implements OnInit {
   }
 
   getBoards() {
+    console.log('get boards!');
+    this.boards$ = this.boardsService.getBoards();
+    this.boards$.subscribe(
+      (res) => console.log(res)
+    );
+    // .subscribe(
+    //   res => {
+    //     console.log(res);
+    //   },
+    //   err => {
+    //     console.log(err);
+    //   }
+    // );
+
+
   }
+  createBoard() {
+    let board = <Board>{
+      name: this.makeBoardNameFake(),
+      from_date: new Date(),
+      due_date: new Date()
+    };
+    this.boardsService.createBoard(board);
+  }
+
+  makeBoardNameFake() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+  }
+
 }

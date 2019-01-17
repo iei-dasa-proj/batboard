@@ -5,7 +5,10 @@ import { catchError, map } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders(
+    {
+      'Content-Type': 'application/json'
+    })
 };
 
 const apiUrl = `${environment.API_URL}`;

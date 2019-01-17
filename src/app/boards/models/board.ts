@@ -1,4 +1,7 @@
 export interface Board {
-  id: string;
+  _id: string;
+  name: string;
+  from_date?: Date;
+  due_date?: Date;
 }
 

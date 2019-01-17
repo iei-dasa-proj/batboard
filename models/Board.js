@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 
 var BoardSchema = new mongoose.Schema({
-    created_date: { type: Date, default: Date.now }
+  name: String,
+  from_date: { type: Date, default: Date.now },
+  due_date: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Board', BoardSchema);
